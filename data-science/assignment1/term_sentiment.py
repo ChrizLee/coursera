@@ -58,17 +58,17 @@ def scan_tweet(text):
             continue
     	elif not word in all_terms:
     		all_terms[word] = {}
-    		all_terms[word]['count'] = 1
-    		all_terms[word]['score'] = score    		
+    		all_terms[word]['count'] = 1.0
+    		all_terms[word]['score'] = float(score)
     	else:    		
-    		all_terms[word]['count'] += 1
-    		all_terms[word]['score'] += score   
+    		all_terms[word]['count'] += 1.0
+    		all_terms[word]['score'] += float(score)
 
 def print_result():
 	global all_terms
 
 	for term, value in all_terms.iteritems():
-		print '%s %.2f' % (term, value['score'] / value['count'])
+		print '%s %.3f' % (term, value['score'] / value['count'])
 
 
 def main():
