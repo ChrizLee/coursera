@@ -2,21 +2,17 @@ import sys
 import json
 
 def lines(fp):
-    print str(len(fp.readlines()))
+    print str(len(fp))
 
 # parse the setiment file and put score of word and phrase into two dicts
 def parse_score(term_file):
     scores = { 'word': {}, 'phrase': {} } # initialize an empty dictionary
-    print scores.items()
     for line in term_file:
         term, score  = line.split("\t")  # The file is tab-delimited. "\t" means "tab character"
         if ' ' in term:
             scores['phrase'][term] = int(score)
         else:
             scores['word'][term] = int(score)
-
-    #print len(scores['phrase'].items())
-    #print len(scores['word'].items())
 
     return scores
 
@@ -49,14 +45,18 @@ def cal_senti_score(tweet_file, term_score):
 
         
 def main():
+
     sent_file = open(sys.argv[1])
     tweet_file = open(sys.argv[2])
-    #lines(sent_file)
-    #lines(tweet_file)
+
+    term_file_lines = sent_file.readlines()
+    tweet_file_lines = tweet_file.readlines()
+    lines(term_file_lines)
+    lines(tweet_file_lines)
 
     try: 
-        term_score = parse_score(sent_file)
-        cal_senti_score(tweet_file, term_score)
+        term_score = parse_score(term_file_lines)
+        cal_senti_score(tweet_file_lines, term_score)
     finally:
         sent_file.close()
         tweet_file.close()
