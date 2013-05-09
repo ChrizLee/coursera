@@ -20,8 +20,8 @@ def parse_score(term_file):
 def get_score(text, scores):
     score = 0
     # add word scores first
-    for word in  text.split(' '):
-        word = word.lower()
+    for word in text.split(' '):
+        word = word.lower().strip(',.?#!:')
         if word in scores['word']:
             score += scores['word'][word]
 
@@ -51,8 +51,8 @@ def main():
 
     term_file_lines = sent_file.readlines()
     tweet_file_lines = tweet_file.readlines()
-    lines(term_file_lines)
-    lines(tweet_file_lines)
+    #lines(term_file_lines)
+    #lines(tweet_file_lines)
 
     try: 
         term_score = parse_score(term_file_lines)

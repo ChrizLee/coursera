@@ -74,13 +74,13 @@ def print_result():
 def main():
     sent_file = codecs.open(sys.argv[1], "r", "utf-8")
     tweet_file = codecs.open(sys.argv[2], "r", "utf-8")
-    hw()
+    #hw()
 
     sent_file_content = sent_file.readlines()
     tweet_file_content = tweet_file.readlines()
 
-    lines(sent_file_content)
-    lines(tweet_file_content)
+    #lines(sent_file_content)
+    #lines(tweet_file_content)
 
     parse_score(sent_file_content)
     for line in tweet_file_content:
