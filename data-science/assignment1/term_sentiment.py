@@ -53,8 +53,8 @@ def scan_tweet(text):
     text =  repr(text)
     score = get_score(text)
     for word in text.split(' '):
-    	word = word.lower().strip(',.?#!:')
-        if not word.isalpha() or word in scores['word'] or word[0] == '@':
+    	word = word.lower().strip(',.?#!:"')
+        if not word or word in scores['word']:
             continue
     	elif not word in all_terms:
     		all_terms[word] = {}

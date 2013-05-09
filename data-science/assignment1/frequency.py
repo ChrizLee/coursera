@@ -14,7 +14,7 @@ def scan_tweet(text):
     text =  repr(text)
     for word in text.split(' '):
         word = word.lower().strip(',.?#!:')
-        if not word.isalpha() or word[0] == '@':
+        if not word:
             continue          
         elif not word in all_terms:
             all_terms[word] = {}
