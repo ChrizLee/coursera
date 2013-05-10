@@ -32,7 +32,7 @@ def get_score(text):
 
     score = 0
     # add word scores first
-    for word in text.split(' '):
+    for word in text.split():
         word = word.lower()
         if word in scores['word']:
             score += scores['word'][word]
@@ -52,8 +52,8 @@ def scan_tweet(text):
     #print text
     text =  repr(text)
     score = get_score(text)
-    for word in text.split(' '):
-    	word = word.lower().strip(',.?#!:"')
+    for word in text.split():
+    	word = word.lower()
         if not word or word in scores['word']:
             continue
     	elif not word in all_terms:
