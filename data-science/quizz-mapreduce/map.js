@@ -37,15 +37,28 @@ function Mapper(jsmr_context, dataline) {
   } 
   
   var is_4cardstraight = false;
-  for (var i = 0; i < 10; i++) { 
-    if (counts[straightrunfaces[i]] &&  
-        counts[straightrunfaces[i+1]] && 
-        counts[straightrunfaces[i+2]] && 
-        counts[straightrunfaces[i+3]] && 
-        !counts[straightrunfaces[i+4]]) { 
-      is_4cardstraight = true; 
-      break; 
-    } 
+  if((counts['A'] && 
+  	  	counts['2'] && 
+	  	counts['3'] && 
+	  	counts['4'] && 
+  	  	!counts['5']) ||
+	 (counts['J'] && 
+  	  	counts['Q'] && 
+	  	counts['K'] && 
+	  	counts['A'] && 
+  	  	!counts['T'])){
+  	  is_4cardstraight = true; 
+  }else{	  
+    for (var i = 1; i < 10; i++) {
+      if (counts[straightrunfaces[i]] &&  
+          counts[straightrunfaces[i+1]] && 
+          counts[straightrunfaces[i+2]] && 
+          counts[straightrunfaces[i+3]] && 
+          (!counts[straightrunfaces[i+4]] && !counts[straightrunfaces[i-1]])) { 
+        is_4cardstraight = true; 
+        break; 
+      }
+  	}
   }
  
   var is_quad = false; 
@@ -63,11 +76,11 @@ function Mapper(jsmr_context, dataline) {
  
   // Emit output 
   if (is_straight && is_flush) jsmr_context.Emit('straightflush', '1'); 
-  else if (is_4cardstraight) jsmr_context.Emit('4cardstraight', '1'); 
   else if (is_quad) jsmr_context.Emit('4ofakind', '1'); 
   else if (is_trip && is_pair) jsmr_context.Emit('fullhouse', '1'); 
   else if (is_flush) jsmr_context.Emit('flush', '1'); 
   else if (is_straight) jsmr_context.Emit('straight', '1'); 
+  else if (is_4cardstraight) jsmr_context.Emit('4cardstraight', '1'); 
   else if (is_trip) jsmr_context.Emit('3ofakind', '1'); 
   else if (is_two_pair) jsmr_context.Emit('2pair', '1'); 
   else if (is_pair) jsmr_context.Emit('pair', '1'); 
