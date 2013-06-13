@@ -63,7 +63,7 @@ def extract(data, type):
 		
 	data = np.append(data, families, 1)
     
-	data = np.delete(data, [name_idx, sib_idx, par_idx, ticket_idx], 1)  # remove the name data, cabin and ticket3
+	data = np.delete(data, [name_idx, sib_idx, par_idx, carbin_idx, ticket_idx], 1)  # remove the name data, cabin and ticket3
 	
 	
 	return data

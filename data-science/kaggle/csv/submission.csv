@@ -34,8 +34,8 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 1,3,"Dean, Mrs. Bertram (Eva Georgetta Light)",female,33,1,2,C.A. 2315,20.575,,S
 0,3,"Johnston, Mrs. Andrew G (Elizabeth Lily"" Watson)""",female,,1,2,W./C. 6607,23.45,,S
 1,1,"Mock, Mr. Philipp Edmund",male,30,1,0,13236,57.75,C78,C
-0,3,"Katavelas, Mr. Vassilios (Catavelas Vassilios"")""",male,18.5,0,0,2682,7.2292,,C
-0,3,"Roth, Miss. Sarah A",female,,0,0,342712,8.05,,S
+1,3,"Katavelas, Mr. Vassilios (Catavelas Vassilios"")""",male,18.5,0,0,2682,7.2292,,C
+1,3,"Roth, Miss. Sarah A",female,,0,0,342712,8.05,,S
 0,3,"Cacic, Miss. Manda",female,21,0,0,315087,8.6625,,S
 0,3,"Sap, Mr. Julius",male,25,0,0,345768,9.5,,S
 1,3,"Hee, Mr. Ling",male,,0,0,1601,56.4958,,S
@@ -72,7 +72,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 1,3,"Mulvihill, Miss. Bertha E",female,24,0,0,382653,7.75,,Q
 0,3,"Minkoff, Mr. Lazar",male,21,0,0,349211,7.8958,,S
 0,3,"Nieminen, Miss. Manta Josefina",female,29,0,0,3101297,7.925,,S
-1,1,"Ovies y Rodriguez, Mr. Servando",male,28.5,0,0,PC 17562,27.7208,D43,C
+0,1,"Ovies y Rodriguez, Mr. Servando",male,28.5,0,0,PC 17562,27.7208,D43,C
 1,1,"Geiger, Miss. Amalie",female,35,0,0,113503,211.5,C130,C
 0,1,"Keeping, Mr. Edwin",male,32.5,0,0,113503,211.5,C132,C
 0,3,"Miles, Mr. Frank",male,,0,0,359306,8.05,,S
@@ -89,7 +89,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 0,3,"Badman, Miss. Emily Louisa",female,18,0,0,A/4 31416,8.05,,S
 1,3,"O'Donoghue, Ms. Bridget",female,,0,0,364856,7.75,,Q
 1,2,"Wells, Master. Ralph Lester",male,2,1,1,29103,23,,S
-0,3,"Dyker, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson)",female,22,1,0,347072,13.9,,S
+1,3,"Dyker, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson)",female,22,1,0,347072,13.9,,S
 1,3,"Pedersen, Mr. Olaf",male,,0,0,345498,7.775,,S
 1,1,"Davidson, Mrs. Thornton (Orian Hays)",female,27,1,2,F.C. 12750,52,B71,S
 0,3,"Guest, Mr. Robert",male,,0,0,376563,8.05,,S
@@ -107,7 +107,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 0,3,"Holthen, Mr. Johan Martin",male,28,0,0,C 4001,22.525,,S
 0,3,"Buckley, Mr. Daniel",male,21,0,0,330920,7.8208,,Q
 0,3,"Ryan, Mr. Edward",male,,0,0,383162,7.75,,Q
-1,3,"Willer, Mr. Aaron (Abi Weller"")""",male,,0,0,3410,8.7125,,S
+0,3,"Willer, Mr. Aaron (Abi Weller"")""",male,,0,0,3410,8.7125,,S
 0,2,"Swane, Mr. George",male,18.5,0,0,248734,13,F,S
 0,2,"Stanton, Mr. Samuel Ward",male,41,0,0,237734,15.0458,,C
 1,3,"Shine, Miss. Ellen Natalia",female,,0,0,330968,7.7792,,Q
@@ -129,7 +129,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 1,3,"McCoy, Miss. Alicia",female,,2,0,367226,23.25,,Q
 0,2,"Bowenur, Mr. Solomon",male,42,0,0,211535,13,,S
 0,3,"Petersen, Mr. Marius",male,24,0,0,342441,8.05,,S
-0,3,"Spinner, Mr. Henry John",male,32,0,0,STON/OQ. 369943,8.05,,S
+1,3,"Spinner, Mr. Henry John",male,32,0,0,STON/OQ. 369943,8.05,,S
 0,1,"Gracie, Col. Archibald IV",male,53,0,0,113780,28.5,C51,C
 0,3,"Lefebre, Mrs. Frank (Frances)",female,,0,4,4133,25.4667,,S
 0,3,"Thomas, Mr. Charles P",male,,1,0,2621,6.4375,,C
@@ -152,11 +152,11 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 1,1,"Earnshaw, Mrs. Boulton (Olive Potter)",female,23,0,1,11767,83.1583,C54,C
 0,3,"Matinoff, Mr. Nicola",male,,0,0,349255,7.8958,,C
 0,3,"Storey, Mr. Thomas",male,60.5,0,0,3701,,,S
-1,3,"Klasen, Mrs. (Hulda Kristina Eugenia Lofqvist)",female,36,0,2,350405,12.1833,,S
+0,3,"Klasen, Mrs. (Hulda Kristina Eugenia Lofqvist)",female,36,0,2,350405,12.1833,,S
 0,3,"Asplund, Master. Filip Oscar",male,13,4,2,347077,31.3875,,S
 0,3,"Duquemin, Mr. Joseph",male,24,0,0,S.O./P.P. 752,7.55,,S
 1,1,"Bird, Miss. Ellen",female,29,0,0,PC 17483,221.7792,C97,S
-1,3,"Lundin, Miss. Olga Elida",female,23,0,0,347469,7.8542,,S
+0,3,"Lundin, Miss. Olga Elida",female,23,0,0,347469,7.8542,,S
 1,1,"Borebank, Mr. John James",male,42,0,0,110489,26.55,D22,S
 0,3,"Peacock, Mrs. Benjamin (Edith Nile)",female,26,0,2,SOTON/O.Q. 3101315,13.775,,S
 1,3,"Smyth, Miss. Julia",female,,0,0,335432,7.7333,,Q
@@ -180,7 +180,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 1,2,"Becker, Mrs. Allen Oliver (Nellie E Baumgardner)",female,36,0,3,230136,39,F4,S
 1,1,"Compton, Mrs. Alexander Taylor (Mary Eliza Ingersoll)",female,64,0,2,PC 17756,83.1583,E45,C
 0,2,"McCrie, Mr. James Matthew",male,30,0,0,233478,13,,S
-1,1,"Compton, Mr. Alexander Taylor Jr",male,37,1,1,PC 17756,83.1583,E52,C
+0,1,"Compton, Mr. Alexander Taylor Jr",male,37,1,1,PC 17756,83.1583,E52,C
 1,1,"Marvin, Mrs. Daniel Warner (Mary Graham Carmichael Farquarson)",female,18,1,0,113773,53.1,D30,S
 0,3,"Lane, Mr. Patrick",male,,0,0,7935,7.75,,Q
 1,1,"Douglas, Mrs. Frederick Charles (Mary Helene Baxter)",female,27,1,1,PC 17558,247.5208,B58 B60,C
@@ -198,7 +198,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 1,1,"Spedden, Master. Robert Douglas",male,6,0,2,16966,134.5,E34,C
 0,3,"Nilsson, Miss. Berta Olivia",female,18,0,0,347066,7.775,,S
 0,2,"Baimbrigge, Mr. Charles Robert",male,23,0,0,C.A. 31030,10.5,,S
-0,3,"Rasmussen, Mrs. (Lena Jacobsen Solvang)",female,,0,0,65305,8.1125,,S
+1,3,"Rasmussen, Mrs. (Lena Jacobsen Solvang)",female,,0,0,65305,8.1125,,S
 1,3,"Murphy, Miss. Nora",female,,0,0,36568,15.5,,Q
 1,3,"Danbom, Master. Gilbert Sigvard Emanuel",male,0.33,0,2,347080,14.4,,S
 0,1,"Astor, Col. John Jacob",male,47,1,0,PC 17757,227.525,C62 C64,C
@@ -216,7 +216,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 0,3,"Andersson, Miss. Ida Augusta Margareta",female,38,4,2,347091,7.775,,S
 0,1,"Head, Mr. Christopher",male,42,0,0,113038,42.5,B11,S
 1,3,"Mahon, Miss. Bridget Delia",female,,0,0,330924,7.8792,,Q
-1,1,"Wick, Mr. George Dennick",male,57,1,1,36928,164.8667,,S
+0,1,"Wick, Mr. George Dennick",male,57,1,1,36928,164.8667,,S
 1,1,"Widener, Mrs. George Dunton (Eleanor Elkins)",female,50,1,1,113503,211.5,C80,C
 0,3,"Thomson, Mr. Alexander Morrison",male,,0,0,32302,8.05,,S
 1,2,"Duran y More, Miss. Florentina",female,30,1,0,SC/PARIS 2148,13.8583,,C
@@ -267,7 +267,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 0,3,"Lyntakoff, Mr. Stanko",male,,0,0,349235,7.8958,,S
 0,1,"Chisholm, Mr. Roderick Robert Crispin",male,,0,0,112051,0,,S
 0,3,"Warren, Mr. Charles William",male,,0,0,C.A. 49867,7.55,,S
-0,3,"Howard, Miss. May Elizabeth",female,,0,0,A. 2. 39186,8.05,,S
+1,3,"Howard, Miss. May Elizabeth",female,,0,0,A. 2. 39186,8.05,,S
 0,3,"Pokrnic, Mr. Mate",male,17,0,0,315095,8.6625,,S
 0,1,"McCaffry, Mr. Thomas Francis",male,46,0,0,13050,75.2417,C6,C
 0,3,"Fox, Mr. Patrick",male,,0,0,368573,7.75,,Q
@@ -321,7 +321,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 0,2,"Jefferys, Mr. Ernest Wilfred",male,22,2,0,C.A. 31029,31.5,,S
 0,3,"Andersson, Mr. Johan Samuel",male,26,0,0,347075,7.775,,S
 0,3,"Krekorian, Mr. Neshan",male,25,0,0,2654,7.2292,F E57,C
-1,2,"Nesson, Mr. Israel",male,26,0,0,244368,13,F2,S
+0,2,"Nesson, Mr. Israel",male,26,0,0,244368,13,F2,S
 1,1,"Rowe, Mr. Alfred G",male,33,0,0,113790,26.55,,S
 1,1,"Kreuchen, Miss. Emilie",female,39,0,0,24160,211.3375,,S
 0,3,"Assam, Mr. Ali",male,23,0,0,SOTON/O.Q. 3101309,7.05,,S
@@ -330,12 +330,12 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 0,2,"Clarke, Mr. Charles Valentine",male,29,1,0,2003,26,,S
 0,2,"Enander, Mr. Ingvar",male,21,0,0,236854,13,,S
 1,2,"Davies, Mrs. John Morgan (Elizabeth Agnes Mary White) ",female,48,0,2,C.A. 33112,36.75,,S
-1,1,"Dulles, Mr. William Crothers",male,39,0,0,PC 17580,29.7,A18,C
+0,1,"Dulles, Mr. William Crothers",male,39,0,0,PC 17580,29.7,A18,C
 0,3,"Thomas, Mr. Tannous",male,,0,0,2684,7.225,,C
 0,3,"Nakid, Mrs. Said (Waika Mary"" Mowad)""",female,19,1,1,2653,15.7417,,C
 0,3,"Cor, Mr. Ivan",male,27,0,0,349229,7.8958,,S
 0,1,"Maguire, Mr. John Edward",male,30,0,0,110469,26,C106,S
-0,2,"de Brito, Mr. Jose Joaquim",male,32,0,0,244360,13,,S
+1,2,"de Brito, Mr. Jose Joaquim",male,32,0,0,244360,13,,S
 0,3,"Elias, Mr. Joseph",male,39,0,2,2675,7.2292,,C
 0,2,"Denbury, Mr. Herbert",male,25,0,0,C.A. 31029,31.5,,S
 0,3,"Betros, Master. Seman",male,,0,0,2622,7.2292,,C
@@ -346,7 +346,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 0,3,"van Billiard, Master. James William",male,,1,1,A/5. 851,14.5,,S
 1,3,"Abelseth, Miss. Karen Marie",female,16,0,0,348125,7.65,,S
 0,2,"Botsford, Mr. William Hull",male,26,0,0,237670,13,,S
-0,3,"Whabee, Mrs. George Joseph (Shawneene Abi-Saab)",female,38,0,0,2688,7.2292,,C
+1,3,"Whabee, Mrs. George Joseph (Shawneene Abi-Saab)",female,38,0,0,2688,7.2292,,C
 0,2,"Giles, Mr. Ralph",male,24,0,0,248726,13.5,,S
 1,2,"Walcroft, Miss. Nellie",female,31,0,0,F.C.C. 13528,21,,S
 1,1,"Greenfield, Mrs. Leo David (Blanche Strouse)",female,45,0,1,PC 17759,63.3583,D10 D12,C
@@ -354,7 +354,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 0,2,"Dibden, Mr. William",male,18,0,0,S.O.C. 14879,73.5,,S
 0,2,"Herman, Mr. Samuel",male,49,1,2,220845,65,,S
 1,3,"Dean, Miss. Elizabeth Gladys Millvina""""",female,0.17,1,2,C.A. 2315,20.575,,S
-1,1,"Julian, Mr. Henry Forbes",male,50,0,0,113044,26,E60,S
+0,1,"Julian, Mr. Henry Forbes",male,50,0,0,113044,26,E60,S
 1,1,"Brown, Mrs. John Murray (Caroline Lane Lamson)",female,59,2,0,11769,51.4792,C101,S
 0,3,"Lockyer, Mr. Edward",male,,0,0,1222,7.8792,,S
 0,3,"O'Keefe, Mr. Patrick",male,,0,0,368402,7.75,,Q
@@ -381,7 +381,7 @@ survived,pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked
 0,3,"Asplund, Master. Carl Edgar",male,5,4,2,347077,31.3875,,S
 0,3,"O'Connor, Mr. Patrick",male,,0,0,366713,7.75,,Q
 0,3,"Foley, Mr. Joseph",male,26,0,0,330910,7.8792,,Q
-0,3,"Risien, Mrs. Samuel (Emma)",female,,0,0,364498,14.5,,S
+1,3,"Risien, Mrs. Samuel (Emma)",female,,0,0,364498,14.5,,S
 0,3,"McNamee, Mrs. Neal (Eileen O'Leary)",female,19,1,0,376566,16.1,,S
 0,2,"Wheeler, Mr. Edwin Frederick""""",male,,0,0,SC/PARIS 2159,12.875,,S
 1,2,"Herman, Miss. Kate",female,24,1,2,220845,65,,S
