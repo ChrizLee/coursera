@@ -1,0 +1,12 @@
+Without carbin:
+
+Cross Validation for random forest, scores: 0.820419308267
+Cross Validation for SVM, scores with C = 0.100000 : 0.616163
+Cross Validation for SVM, scores with C = 0.300000 : 0.621788
+Cross Validation for SVM, scores with C = 1.000000 : 0.704789
+Cross Validation for SVM, scores with C = 3.000000 : 0.725014
+Cross Validation for SVM, scores with C = 10.000000 : 0.721656
+Cross Validation for SVM, scores with C = 30.000000 : 0.727268
+Cross Validation for SVM, scores with C = 100.000000 : 0.726150
+Cross Validation for SVM, scores with C = 300.000000 : 0.712667
+Cross Validation for SVM, scores with C = 1000.000000 : 0.701456
