@@ -40,20 +40,18 @@ def main():
     scores = cross_validation.cross_val_score(forest, cv_data, cv_target, cv=5)    
     print "Cross Validation for random forest, scores: " + str(np.mean(scores))
     
-    '''
+    
     C_list = [0.1, 0.3, 1, 3, 10, 30, 100, 300, 1000]
     for c in C_list:
         svm_clf = svm.SVC(C=c)
         scores = cross_validation.cross_val_score(svm_clf, cv_data, cv_target, cv=5)
         print "Cross Validation for SVM, scores with C = %f : %f" % (c, np.mean(scores))
-    '''     
     
     
     forest = forest.fit(cv_data, cv_target)
     
     print 'Predicting'
-    for row in test_data:
-        print row
+    
     output = forest.predict(test_data)
     
     open_file_object = csv.writer(open("csv/submission.csv", "wb"))
@@ -61,6 +59,7 @@ def main():
 
     
     test_file_object.next()
+    open_file_object.writerow(["survived", "pclass", "name", "sex", "age", "sibsp", "parch", "ticket", "fare", "cabin", "embarked"])
     i = 0
     for row in test_file_object:
         row.insert(0, output[i].astype(np.uint8))
