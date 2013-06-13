@@ -10,3 +10,16 @@ Cross Validation for SVM, scores with C = 30.000000 : 0.727268
 Cross Validation for SVM, scores with C = 100.000000 : 0.726150
 Cross Validation for SVM, scores with C = 300.000000 : 0.712667
 Cross Validation for SVM, scores with C = 1000.000000 : 0.701456
+
+
+With carbin
+Cross Validation for random forest, scores: 0.813677735233
+Cross Validation for SVM, scores with C = 0.100000 : 0.616163
+Cross Validation for SVM, scores with C = 0.300000 : 0.618411
+Cross Validation for SVM, scores with C = 1.000000 : 0.707062
+Cross Validation for SVM, scores with C = 3.000000 : 0.725020
+Cross Validation for SVM, scores with C = 10.000000 : 0.722773
+Cross Validation for SVM, scores with C = 30.000000 : 0.719402
+Cross Validation for SVM, scores with C = 100.000000 : 0.719402
+Cross Validation for SVM, scores with C = 300.000000 : 0.712661
+Cross Validation for SVM, scores with C = 1000.000000 : 0.705913
