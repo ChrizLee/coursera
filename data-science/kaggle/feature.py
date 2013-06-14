@@ -22,8 +22,8 @@ def extract(data, type):
     # embark c=0, s=1, q=2
     
 	data[data[0::, embark_idx] == 'C', embark_idx] = 0
-	data[data[0::, embark_idx] == 'S', embark_idx] = 1
-	data[data[0::, embark_idx] == 'Q', embark_idx] = 2
+	data[data[0::, embark_idx] == 'S', embark_idx] = 0.5
+	data[data[0::, embark_idx] == 'Q', embark_idx] = 1
     
     # I need to fill in the gaps of the data and make it complete.
     # So where there is no price, I will assume price on median of that class
@@ -31,18 +31,30 @@ def extract(data, type):
     
     # All the ages with no data make the median of the data
 	data[data[0::, age_idx] == '', age_idx] = np.median(data[data[0::, age_idx]\
-                                               != '', age_idx].astype(np.float))
+                                               != '', age_idx].astype(np.float))	
+	# Normalize age
+	for row_idx, row in enumerate(data):
+		age = float(row[age_idx]) / 100.0
+		data[row_idx, age_idx] = np.float(age)
+		
 	
     # All missing ebmbarks just make them embark from most common place
 	data[data[0::, embark_idx] == '', embark_idx] = \
 		np.round(np.mean(data[data[0::, embark_idx] != '', embark_idx].astype(np.float)))
 		
 	# All the missing prices assume median of their respectice class
+	price_sum = 0
 	for i in xrange(np.size(data[0::, 0])):
 		if data[i, fare_idx] == '':
 			data[i, fare_idx] = np.median(data[(data[0::, fare_idx] != '') & \
-                                                 (data[0::, 0] == data[i, 0])\
-                , fare_idx].astype(np.float))
+                                         (data[0::, 0] == data[i, 0]), fare_idx].astype(np.float))		
+		price_sum += float(data[i, fare_idx])
+# 			
+#                 	
+	# Normalize fare
+	for row_idx, row in enumerate(data):
+		fare = float(row[fare_idx]) / price_sum
+		data[row_idx, fare_idx] = np.float(fare)
 	
 	# Make cabin count as a feature
 	for row_idx, row in enumerate(data):
@@ -50,7 +62,7 @@ def extract(data, type):
 		if not carbin:
 			val = 0
 		else:
-			val = len(str.split(carbin, " "))
+			val = 1
 		data[row_idx][carbin_idx] = np.int(val)
 		
 	
@@ -63,7 +75,7 @@ def extract(data, type):
 		
 	data = np.append(data, families, 1)
     
-	data = np.delete(data, [name_idx, sib_idx, par_idx, carbin_idx, ticket_idx], 1)  # remove the name data, cabin and ticket3
+	data = np.delete(data, [name_idx, sib_idx, par_idx, ticket_idx], 1)  # remove the name data, cabin and ticket3
 	
 	
 	return data

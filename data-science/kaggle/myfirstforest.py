@@ -2,9 +2,9 @@
 import numpy as np
 import csv as csv
 import feature
-from sklearn import cross_validation
+from sklearn import cross_validation, svm, metrics
 from sklearn.ensemble import RandomForestClassifier
-from sklearn import svm
+import scipy.sparse
 
 def main():
     csv_file_object = csv.reader(open('csv/train.csv', 'rb'))  # Load in the training csv file
@@ -41,18 +41,29 @@ def main():
     print "Cross Validation for random forest, scores: " + str(np.mean(scores))
     
     
+    best_score = 0
+    best_c = 0
+    best_gamma = 0
     C_list = [0.1, 0.3, 1, 3, 10, 30, 100, 300, 1000]
+    gamma_list = [2 ** -15, 2 ** -13, 2 ** -11, 2 ** -9, 2 ** -7, 2 ** -5, 2 ** -3, 2 ** -1]
     for c in C_list:
-        svm_clf = svm.SVC(C=c)
-        scores = cross_validation.cross_val_score(svm_clf, cv_data, cv_target, cv=5)
-        print "Cross Validation for SVM, scores with C = %f : %f" % (c, np.mean(scores))
+        for gamma in gamma_list:
+            svm_clf = svm.SVC(C=c, gamma=gamma)
+            scores = cross_validation.cross_val_score(svm_clf, cv_data, cv_target, cv=5)
+            score = np.mean(scores)
+            print "Cross Validation for SVM, scores with C = %f gamma = %f: %f" % (c, gamma, score)
+            if score > best_score:
+                best_score = score
+                best_c = c
+                best_gamma = gamma
     
-    
-    forest = forest.fit(cv_data, cv_target)
+    print "Best svm score is %f, with c=%f and gamma=%f" % (best_score, best_c, best_gamma)
     
     print 'Predicting'
     
-    output = forest.predict(test_data)
+    clf = svm.SVC(C=best_c, gamma=best_gamma)
+    clf.fit(cv_data, cv_target)
+    output = clf.predict(test_data)
     
     open_file_object = csv.writer(open("csv/submission.csv", "wb"))
     test_file_object = csv.reader(open('csv/test.csv', 'rb'))  # Load in the csv file

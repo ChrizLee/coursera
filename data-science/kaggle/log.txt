@@ -47,3 +47,27 @@ Cross Validation for SVM, scores with C = 30.000000 : 0.721631
 Cross Validation for SVM, scores with C = 100.000000 : 0.720520
 Cross Validation for SVM, scores with C = 300.000000 : 0.718254
 Cross Validation for SVM, scores with C = 1000.000000 : 0.699159
+
+With age and fare normalized
+Cross Validation for random forest, scores: 0.815918649175
+Cross Validation for SVM, scores with C = 0.100000 : 0.803590
+Cross Validation for SVM, scores with C = 0.300000 : 0.806968
+Cross Validation for SVM, scores with C = 1.000000 : 0.806961
+Cross Validation for SVM, scores with C = 3.000000 : 0.809208
+Cross Validation for SVM, scores with C = 10.000000 : 0.814820
+Cross Validation for SVM, scores with C = 30.000000 : 0.811449
+Cross Validation for SVM, scores with C = 100.000000 : 0.813697
+Cross Validation for SVM, scores with C = 300.000000 : 0.809190
+Cross Validation for SVM, scores with C = 1000.000000 : 0.805819
+
+Normalized and use median of fare
+Cross Validation for random forest, scores: 0.820413031197
+Cross Validation for SVM, scores with C = 0.100000 : 0.803590
+Cross Validation for SVM, scores with C = 0.300000 : 0.806968
+Cross Validation for SVM, scores with C = 1.000000 : 0.806961
+Cross Validation for SVM, scores with C = 3.000000 : 0.809208
+Cross Validation for SVM, scores with C = 10.000000 : 0.814820
+Cross Validation for SVM, scores with C = 30.000000 : 0.811449
+Cross Validation for SVM, scores with C = 100.000000 : 0.813697
+Cross Validation for SVM, scores with C = 300.000000 : 0.809190
+Cross Validation for SVM, scores with C = 1000.000000 : 0.805819
